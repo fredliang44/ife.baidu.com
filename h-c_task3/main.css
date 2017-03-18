@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 20px;
+    
+}
+html{
+    padding: 0;
+}
+.content{
+    background-color: #eee;
+    border: 1px solid #999;
+    max-height: 1000px;
+    display:flex;
+    justify-content:space-between;
+    
+}
+.box1, .box2, .box3{
+    
+    border: 1px solid #999;
+    background-color: white;
+   
+}
+.inner_logo>div{
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    height: 80px;
+    padding: 0;
+}
+
+.box1{
+    width: 200px;
+    height: 120px;
+    
+}
+a{
+    padding: 0;
+}
+.innerlogo>div>a, .inner_personal_logo>a{
+    width: 80px;
+    
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    height: 80px;
+}
+.inner_logo{
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    border: 1px solid #777;
+    display: inline-block;
+    overflow: hidden;
+}
+.box1 > p{
+    padding: 10px;
+    display: inline-block;
+    position: absolute;
+
+
+}
+.box2{
+    width: 0;
+    flex-grow: 1;
+    margin: 0 20px 0 20px;
+    height: 30rem;
+}
+
+.box3{
+    
+    
+    width: 120px;
+    flex-grow: 0;
+}
+.inner_personal_logo{
+    width: 80px;
+    height: 80px;
+    background-color: #eee;
+    border: 1px solid #777;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+}
+.inner_personal_logo:last-child{
+    margin:0;
+}

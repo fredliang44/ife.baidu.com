@@ -1,0 +1,28 @@
+#name_{
+    margin: 2px;
+    font-weight: bold;
+    width: 50px;
+}
+#input_id{
+   
+    height:30px;
+    width: 130px;
+    border-radius: 5px;
+   
+border: 1.5px solid ;
+//border-color: grey;
+}
+#id_submit{
+    width: 60px;
+    height: 36px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #4a8ff7;
+    color: white;
+    padding: 0;
+    font-weight: 400;
+}
+#alert{
+    font-size: 0.5rem;
+    //color: grey;
+}

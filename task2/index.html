@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+    <script>
+       
+
+        function solve_string(string_in){
+            
+            //var string_length= getByteLen(string_in.value);
+            var check_result= getByteLen(string_in);
+            
+            
+            //alert(check_result);
+            
+            
+            if(check_result== -1){
+                //非正常字符
+                //alert(document.getElementById("input_id").style.borderColor);
+                document.getElementById("input_id").style.borderColor  = 'red';
+
+                document.getElementById("alert").style.color = 'red';
+                document.getElementById("alert").innerHTML = '请输入中文,英文和数字'
+                return 2;
+            }
+            if(check_result==0){
+                document.getElementById("input_id").style.borderColor  = 'red';
+
+                document.getElementById("alert").style.color = 'red';
+                document.getElementById("alert").innerHTML = '姓名不能为空'
+                return 0;//OK
+            }
+            if(check_result<4||check_result > 12){
+                document.getElementById("input_id").style.borderColor  = 'red';
+                document.getElementById("alert").style.color = 'red';
+                document.getElementById("alert").innerHTML = '长度为4~16个字符'
+                return 0;//OK
+            }
+            else{
+                document.getElementById("input_id").style.borderColor  = 'green';
+                document.getElementById("alert").style.color = 'green';
+                document.getElementById("alert").innerHTML = '名称格式正确'
+                return 1;//1为alert字符长度}
+                }
+
+            }
+         function getByteLen(val) {
+            var len = 0;
+            for (var i = 0; i < val.length; i++) {
+                var a = val.charAt(i);
+
+                    if (a.match(/[^\x00-\xff]/ig) != null) {
+                    len += 2;
+                    
+                    }
+                    else if(/[a-z0-9A-Z]/i.test(val.charAt(i))) {
+                    len += 1;//error
+               
+                    }
+                    else if(val ==''){
+                        break;
+                    }
+                    else {
+                        //alert(a);
+                        return -1;
+                    }
+             
+                }
+                return len;
+            }
+               
+            
+        function inputnum(){
+            var input_value = document.getElementById("input_id");
+            var string_in = input_value.value;
+            var alert_txt = document.getElementById("alert");
+            //alert(input_value.value.length);
+            solve_string(string_in);
+        }
+    </script>
+    <form>
+        <table>
+            <tbody>
+                <tr>
+                    <td id="name_">名称</td>
+                    <td>
+                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                    </td>
+                    <td>
+                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+</body>
+</html>
