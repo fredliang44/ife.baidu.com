@@ -1,4 +1,8 @@
-#name_{
+tr>td:first-child{
+    width: 80px;
+}
+
+#name_, #input_,  #passwd_, #Con_passwd_,  #mail_, #phone_{
     margin: 2px;
     font-weight: bold;
     width: 50px;
