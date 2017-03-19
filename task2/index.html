@@ -14,7 +14,7 @@
         function solve_string(string_in){
             
             //var string_length= getByteLen(string_in.value);
-            var check_result= getByteLen(string_in);
+            var check_result= getByteLen(string_in);//调用获取长度函数
             
             
             //alert(check_result);
@@ -73,7 +73,7 @@
              
                 }
                 return len;
-            }
+            }//传入字符串，返回字符串长度；-1为含有非法字符，汉字为两个字符长度
                
             
         function inputnum(){
@@ -81,7 +81,7 @@
             var string_in = input_value.value;
             var alert_txt = document.getElementById("alert");
             //alert(input_value.value.length);
-            solve_string(string_in);
+            solve_string(string_in);//调用处理函数
         }
     </script>
     <form>
@@ -89,6 +89,70 @@
             <tbody>
                 <tr>
                     <td id="name_">名称</td>
+                    <td>
+                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                    </td>
+                    <td>
+                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="passwd_">密码</td>
+                    <td>
+                        <input style="border-color: grey" type="text" id="passwd_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                    </td>
+                    <td>
+                        <input onclick="inputnum()" type="button" id="passwd_submit" value="验证" name="submit">
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td></td>
+                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td id="Con_passwd_">确认密码</td>
+                    <td>
+                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                    </td>
+                    <td>
+                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td id="mail_">邮箱</td>
+                    <td>
+                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                    </td>
+                    <td>
+                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td></td>
+                </tr>
+
+
+                <tr>
+                    <td id="phone_">手机</td>
                     <td>
                         <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
