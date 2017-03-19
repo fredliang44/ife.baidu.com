@@ -13,12 +13,18 @@
             function inputnum(){
                 var input_value = document.getElementById("input_id");
                 var string_in = input_value.value;
-                var alert_txt = document.getElementById("alert");
+                var alert_txt = document.getElementById("name_alert");
                 //alert(input_value.value.length);
                 solve_string(string_in);//调用处理函数
             }
 
-
+            function change_color(location1,location2,changed_color){
+                      location1.style.borderColor = changed_color;
+                      location2.style.color = changed_color;
+            }
+            function print_alert(location,text){
+                        location.innerHTML = text;
+            }
 
 
             function solve_string(string_in){   
@@ -28,15 +34,15 @@
             if(check_result== -1){
                 //非正常字符
                 //alert(document.getElementById("input_id").style.borderColor);
-                document.getElementById("input_id").style.borderColor  = 'red';
-
-                document.getElementById("name_alert").style.color = 'red';
-                document.getElementById("name_alert").innerHTML = '请输入中文,英文和数字'
+                change_color(document.getElementById("input_id"),document.getElementById("name_alert"),'red');
+                print_alert(document.getElementById("name_alert"),'请输入中文,英文和数字')
+                //document.getElementById("input_id").style.borderColor  = 'red';
+                //document.getElementById("name_alert").style.color = 'red';
+                //document.getElementById("name_alert").innerHTML = '请输入中文,英文和数字'
                 return 2;
             }
             if(check_result==0){
                 document.getElementById("input_id").style.borderColor  = 'red';
-
                 document.getElementById("name_alert").style.color = 'red';
                 document.getElementById("name_alert").innerHTML = '姓名不能为空'
                 return 0;//OK
@@ -54,6 +60,8 @@
                 return 1;//1为alert字符长度}
                 }
             }
+
+
 
 
          function getByteLen(val) {
