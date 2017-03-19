@@ -25,27 +25,27 @@
                 //alert(document.getElementById("input_id").style.borderColor);
                 document.getElementById("input_id").style.borderColor  = 'red';
 
-                document.getElementById("alert").style.color = 'red';
-                document.getElementById("alert").innerHTML = '请输入中文,英文和数字'
+                document.getElementById("name_alert").style.color = 'red';
+                document.getElementById("name_alert").innerHTML = '请输入中文,英文和数字'
                 return 2;
             }
             if(check_result==0){
                 document.getElementById("input_id").style.borderColor  = 'red';
 
-                document.getElementById("alert").style.color = 'red';
-                document.getElementById("alert").innerHTML = '姓名不能为空'
+                document.getElementById("name_alert").style.color = 'red';
+                document.getElementById("name_alert").innerHTML = '姓名不能为空'
                 return 0;//OK
             }
             if(check_result<4||check_result > 12){
                 document.getElementById("input_id").style.borderColor  = 'red';
-                document.getElementById("alert").style.color = 'red';
-                document.getElementById("alert").innerHTML = '长度为4~16个字符'
+                document.getElementById("name_alert").style.color = 'red';
+                document.getElementById("name_alert").innerHTML = '长度为4~16个字符'
                 return 0;//OK
             }
             else{
                 document.getElementById("input_id").style.borderColor  = 'green';
-                document.getElementById("alert").style.color = 'green';
-                document.getElementById("alert").innerHTML = '名称格式正确'
+                document.getElementById("name_alert").style.color = 'green';
+                document.getElementById("name_alert").innerHTML = '名称格式正确'
                 return 1;//1为alert字符长度}
                 }
 
@@ -93,14 +93,14 @@
                         <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                        <input onclick="inputnum()" type="button" id="name_submit" value="验证" name="submit">
                     </td>
                 </tr>
 
 
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td style="color: grey" id="name_alert">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
                 <tr>
@@ -122,15 +122,15 @@
                 <tr>
                     <td id="Con_passwd_">确认密码</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="Con_passwd_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                        <input onclick="inputnum()" type="button" id="Con_passwd_submit" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td style="color: grey" id="Con_passwd_alert">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
 
@@ -138,15 +138,15 @@
                 <tr>
                     <td id="mail_">邮箱</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="mail_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                        <input onclick="inputnum()" type="button" id="mail_submit" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td style="color: grey" id="mail_alert">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
 
@@ -154,15 +154,15 @@
                 <tr>
                     <td id="phone_">手机</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="phone_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="id_submit" value="验证" name="submit">
+                        <input onclick="inputnum()" type="button" id="phone_submit" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="alert">必填，长度为4~16个字符</td>
+                    <td style="color: grey" id="phone_alert">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
             </tbody>
