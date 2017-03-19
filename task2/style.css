@@ -22,7 +22,7 @@ border: 1.5px solid ;
     padding: 0;
     font-weight: 400;
 }
-#name_alert{
+#name_alert, #passwd_alert, #Con_passwd_alert, #mail_alert, #phone_alert{
     font-size: 0.5rem;
     //color: grey;
 }
