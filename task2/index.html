@@ -10,16 +10,21 @@
 <body>
     <script>
        
+            function inputnum(){
+                var input_value = document.getElementById("input_id");
+                var string_in = input_value.value;
+                var alert_txt = document.getElementById("alert");
+                //alert(input_value.value.length);
+                solve_string(string_in);//调用处理函数
+            }
 
-        function solve_string(string_in){
-            
+
+
+
+            function solve_string(string_in){   
             //var string_length= getByteLen(string_in.value);
             var check_result= getByteLen(string_in);//调用获取长度函数
-            
-            
             //alert(check_result);
-            
-            
             if(check_result== -1){
                 //非正常字符
                 //alert(document.getElementById("input_id").style.borderColor);
@@ -48,8 +53,9 @@
                 document.getElementById("name_alert").innerHTML = '名称格式正确'
                 return 1;//1为alert字符长度}
                 }
-
             }
+
+
          function getByteLen(val) {
             var len = 0;
             for (var i = 0; i < val.length; i++) {
@@ -76,13 +82,7 @@
             }//传入字符串，返回字符串长度；-1为含有非法字符，汉字为两个字符长度
                
             
-        function inputnum(){
-            var input_value = document.getElementById("input_id");
-            var string_in = input_value.value;
-            var alert_txt = document.getElementById("alert");
-            //alert(input_value.value.length);
-            solve_string(string_in);//调用处理函数
-        }
+
     </script>
     <form>
         <table>
