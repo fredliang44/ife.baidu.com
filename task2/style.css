@@ -3,7 +3,7 @@
     font-weight: bold;
     width: 50px;
 }
-#input_id{
+#input_id, #passwd_id, Con_passwd_id, mail_id, phone_id{
    
     height:30px;
     width: 130px;
