@@ -1,7 +1,14 @@
 tr>td:first-child{
     width: 80px;
 }
-
+body{    
+    display:flex;
+    justify-content:center;
+    align-items: center;
+}
+form{
+   
+}
 #name_, #input_,  #passwd_, #Con_passwd_,  #mail_, #phone_{
     margin: 2px;
     text-align: right;
@@ -10,7 +17,6 @@ tr>td:first-child{
     font-size: 14px;
 }
 
-td#Con_passwd_ {}
 #input_id1, #input_id2, #input_id3, #input_id4, #input_id5{
    height:30px;
    width: 500px;
