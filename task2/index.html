@@ -103,6 +103,12 @@
                 if(ca == 5) alert("输入正确");
                 else alert("输入错误，请检查是否符合规范");
             }
+
+            function focus_it(order){//获得r焦点
+                document.getElementById("name_alert"+order).style.display = 'block';
+            }
+
+            
     </script>
     <form>
         <table>
@@ -110,7 +116,7 @@
                 <tr>
                     <td id="name_">名称</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id1" onkeypress='if(event.keyCode==13){inputnum(1);return false;}'>
+                        <input style="border-color: grey"  onblur="inputnum(1)" onfocus="focus_it(1)" type="text" id="input_id1" onkeypress='if(event.keyCode==13){inputnum(1);return false;}'>
                     </td>
                     <td>
                         <input onclick="inputnum(1)" type="button" id="name_submit1" value="验证" name="submit">
@@ -118,14 +124,14 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="name_alert1">必填，长度为4~16个字符</td>
+                    <td style="color: grey; display:none" id="name_alert1" >必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
                 
                 <tr>
                     <td id="passwd_">密码</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id2" onkeypress='if(event.keyCode==13){inputnum(2);return false;}'>
+                        <input style="border-color: grey;"  onblur="inputnum(2)"  onfocus="focus_it(2)" type="text" id="input_id2" onkeypress='if(event.keyCode==13){inputnum(2);return false;}'>
                     </td>
                     <td>
                         <input onclick="inputnum(2)" type="button" id="name_submit2" value="验证" name="submit">
@@ -133,13 +139,13 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="name_alert2">必填，长度为4~16个字符</td>
+                    <td style="color: grey; display:none" id="name_alert2">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
                 <tr>
                     <td id="Con_passwd_">确认密码</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id3" onkeypress='if(event.keyCode==13){inputnum(3);return false;}'>
+                        <input style="border-color: grey"  onblur="inputnum(3)" onfocus="focus_it(3)" type="text" id="input_id3" onkeypress='if(event.keyCode==13){inputnum(3);return false;}'>
                     </td>
                     <td>
                         <input onclick="inputnum(3)" type="button" id="name_submit3" value="验证" name="submit">
@@ -147,7 +153,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="name_alert3">必填，长度为4~16个字符</td>
+                    <td style="color: grey; display:none" id="name_alert3">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
 
@@ -155,7 +161,7 @@
                 <tr>
                     <td id="mail_">邮箱</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id4" onkeypress='if(event.keyCode==13){inputnum(4);return false;}'>
+                        <input style="border-color: grey"  onblur="inputnum(4)"  onfocus="focus_it(4)" type="text" id="input_id4" onkeypress='if(event.keyCode==13){inputnum(4);return false;}'>
                     </td>
                     <td>
                         <input onclick="inputnum(4)" type="button" id="name_submit4" value="验证" name="submit">
@@ -163,7 +169,7 @@
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="name_alert4">必填，长度为4~16个字符</td>
+                    <td style="color: grey; display:none" id="name_alert4">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
 
@@ -171,15 +177,15 @@
                 <tr>
                     <td id="phone_">手机</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id5" onkeypress='if(event.keyCode==13){inputnum(5);return false;}'>
+                        <input style="border-color: grey"  onblur="inputnum(5)" onfocus="focus_it(5)" type="text" id="input_id5" onkeypress='if(event.keyCode==13){inputnum(5);return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum(5)" type="button" id="name_submit5" value="验证" name="submit">
+                        <input onclick="inputnum(5); display:none" type="button" id="name_submit5" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td style="color: grey" id="name_alert5">必填，长度为4~16个字符</td>
+                    <td style="color: grey; display:none" id="name_alert5">必填，长度为4~16个字符</td>
                     <td></td>
                 </tr>
             </tbody>
