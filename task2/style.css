@@ -7,16 +7,15 @@ tr>td:first-child{
     font-weight: bold;
     width: 50px;
 }
-#input_id, #passwd_id, #Con_passwd_id, #mail_id, #phone_id{
+#input_id1, #input_id2, #input_id3, #input_id4, #input_id5{
    
     height:30px;
     width: 130px;
     border-radius: 5px;
    
 border: 1.5px solid ;
-//border-color: grey;
 }
-#name_submit, #passwd_submit, #Con_passwd_submit, #mail_submit, #phone_submit{
+#name_submit1, #name_submit2, #name_submit3, #name_submit4, #name_submit5 {
     width: 60px;
     height: 36px;
     border-radius: 5px;
@@ -26,7 +25,7 @@ border: 1.5px solid ;
     padding: 0;
     font-weight: 400;
 }
-#name_alert, #passwd_alert, #Con_passwd_alert, #mail_alert, #phone_alert{
+#name_alert1, #name_alert2, #name_alert3, #name_alert4, #name_alert5{
     font-size: 0.5rem;
     //color: grey;
 }
