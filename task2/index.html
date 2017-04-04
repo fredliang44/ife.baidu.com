@@ -10,24 +10,24 @@
 <body>
     <script>
        
-            function inputnum(){
-                var input_value = document.getElementById("input_id");
+            function inputnum(order){
+                var input_value = document.getElementById("input_id"+order);
                 var string_in = input_value.value;
-                var alert_txt = document.getElementById("name_alert");
+                var alert_txt = document.getElementById("name_alert"+order);
                 //alert(input_value.value.length);
-                solve_string(string_in);//调用处理函数
+                solve_string(order,string_in);//调用处理函数
             }
 
-            
-            function solve_string(string_in){   
+
+            function solve_string(order,string_in){   
             //var string_length= getByteLen(string_in.value);
             var check_result = getByteLen(string_in);//调用获取长度函数
             //alert(check_result);
             if(check_result == -1){
                 //非正常字符
                 //alert(document.getElementById("input_id").style.borderColor);
-                change_color(document.getElementById("input_id"),document.getElementById("name_alert"),'red');
-                print_alert(document.getElementById("name_alert"),'请输入中文,英文和数字')
+                change_color(document.getElementById("input_id"+order),document.getElementById("name_alert"+order),'red');
+                print_alert(document.getElementById("name_alert"+order),'请输入中文,英文和数字')
                 //document.getElementById("input_id").style.borderColor  = 'red';
                 //document.getElementById("name_alert").style.color = 'red';
                 //document.getElementById("name_alert").innerHTML = '请输入中文,英文和数字'
@@ -45,21 +45,21 @@
 
             
             if(check_result==0){
-                document.getElementById("input_id").style.borderColor  = 'red';
-                document.getElementById("name_alert").style.color = 'red';
-                document.getElementById("name_alert").innerHTML = '姓名不能为空'
+                document.getElementById("input_id"+order).style.borderColor  = 'red';
+                document.getElementById("name_alert"+order).style.color = 'red';
+                document.getElementById("name_alert"+order).innerHTML = '姓名不能为空'
                 return 0;//OK
             }
             if(check_result<4||check_result > 12){
-                document.getElementById("input_id").style.borderColor  = 'red';
-                document.getElementById("name_alert").style.color = 'red';
-                document.getElementById("name_alert").innerHTML = '长度为4~16个字符'
+                document.getElementById("input_id"+order).style.borderColor  = 'red';
+                document.getElementById("name_alert"+order).style.color = 'red';
+                document.getElementById("name_alert"+order).innerHTML = '长度为4~16个字符'
                 return 0;//OK
             }
             else{
-                document.getElementById("input_id").style.borderColor  = 'green';
-                document.getElementById("name_alert").style.color = 'green';
-                document.getElementById("name_alert").innerHTML = '名称格式正确'
+                document.getElementById("input_id"+order).style.borderColor  = 'green';
+                document.getElementById("name_alert"+order).style.color = 'green';
+                document.getElementById("name_alert"+order).innerHTML = '名称格式正确'
                 return 1;//1为alert字符长度}
                 }
             }
@@ -101,10 +101,10 @@
                 <tr>
                     <td id="name_">名称</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="input_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="input_id1" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="name_submit" value="验证" name="submit">
+                        <input onclick="inputnum(1)" type="button" id="name_submit1" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
@@ -116,10 +116,10 @@
                 <tr>
                     <td id="passwd_">密码</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="passwd_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="input_id2" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="passwd_submit" value="验证" name="submit">
+                        <input onclick="inputnum(2)" type="button" id="name_submit2" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
@@ -130,10 +130,10 @@
                 <tr>
                     <td id="Con_passwd_">确认密码</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="Con_passwd_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="input_id3" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="Con_passwd_submit" value="验证" name="submit">
+                        <input onclick="inputnum(3)" type="button" id="name_submit3" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
@@ -146,10 +146,10 @@
                 <tr>
                     <td id="mail_">邮箱</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="mail_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="input_id4" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="mail_submit" value="验证" name="submit">
+                        <input onclick="inputnum(4)" type="button" id="name_submit4" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
@@ -162,10 +162,10 @@
                 <tr>
                     <td id="phone_">手机</td>
                     <td>
-                        <input style="border-color: grey" type="text" id="phone_id" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
+                        <input style="border-color: grey" type="text" id="input_id5" onkeypress='if(event.keyCode==13){inputnum();return false;}'>
                     </td>
                     <td>
-                        <input onclick="inputnum()" type="button" id="phone_submit" value="验证" name="submit">
+                        <input onclick="inputnum(5)" type="button" id="name_submit5" value="验证" name="submit">
                     </td>
                 </tr>
                 <tr>
