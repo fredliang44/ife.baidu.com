@@ -4,16 +4,18 @@ tr>td:first-child{
 
 #name_, #input_,  #passwd_, #Con_passwd_,  #mail_, #phone_{
     margin: 2px;
-    font-weight: bold;
+    text-align: right;
     width: 50px;
+    padding-right: 15px;
+    font-size: 14px;
 }
+
+td#Con_passwd_ {}
 #input_id1, #input_id2, #input_id3, #input_id4, #input_id5{
-   
-    height:30px;
-    width: 130px;
-    border-radius: 5px;
-   
-border: 1.5px solid ;
+   height:30px;
+   width: 500px;
+   border-radius: 5px;
+   border: 1.5px solid;
 }
 #name_submit1, #name_submit2, #name_submit3, #name_submit4, #name_submit5 {
     width: 60px;
@@ -28,4 +30,22 @@ border: 1.5px solid ;
 #name_alert1, #name_alert2, #name_alert3, #name_alert4, #name_alert5{
     font-size: 0.5rem;
     //color: grey;
+}
+
+.sun_all {
+    float: right;
+    height: 35px;
+    margin-top: 15px;
+    width: 80px;
+    border-radius: 5px;
+    color: white;
+    background-color: #1881ef;
+    border: none;
+    text-align:center;
+
+}
+
+.sun_all:active {
+    background-color: #0e68c7;
+    outline:0;
 }

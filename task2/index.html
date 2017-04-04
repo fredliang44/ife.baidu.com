@@ -97,9 +97,13 @@
             function checkall(){
                 var ca=0;
                 for(var i=1;i<6;i++){
-                    inputnum(i);
-                    ca++;
+                    ca+=inputnum(i);
+                    focus_it(i);
                 }
+                alert_All(ca);
+            }
+
+            function alert_All(ca){
                 if(ca == 5) alert("输入正确");
                 else alert("输入错误，请检查是否符合规范");
             }
@@ -179,10 +183,10 @@
                     <td></td>
                 </tr>
                 <tr class="submitall">
-                    <td colspan="3">
-                        <button class="sun_all">
-                            提交
-                        </button>
+                    <td colspan="2">
+                        <input class="sun_all" value="提交" readonly="readonly" onclick="checkall()">
+                            
+                        </input>
                     </td>
                 </tr>
             </tbody>
